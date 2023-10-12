@@ -3,10 +3,6 @@
 The summary of my solutions to the assignments from Introduction to Web Applications laboratories.
 Most of them are done in polish language.
 
-All PDFs with task instructions are the property of Grzegorz Rogus, BEng, PhD.
-https://home.agh.edu.pl/~rogus/
-<br/>
-
 ## Laboratory topics:
 
 * **lab2** - designing known solutions with bare HTML and CSS, responsiveness of the website
