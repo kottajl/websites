@@ -1,0 +1,77 @@
+<img id="backToContainer" routerLink="/offer" src="../../assets/icons/left_arrow.png">
+
+<div id="card{{myTrip.id}}" class="tripInfo">
+    <div class="modify">
+        <button *ngIf="myTrip.remained > 0" (click)="addTrip()">+</button>
+        <button [disabled]="myTrip.remained === myTrip.maxQuantity" (click)="removeTrip()">-</button>
+    </div>
+    
+    <div id="dataSetInfo">
+        <h2>{{myTrip.name | uppercase}}</h2>
+        <h5>{{myTrip.country | uppercase}}</h5>
+
+        <div id="photsContainer">
+            <button id="btnLeft" class="btnSlider" (click)="changePhoto(-1)"></button>
+            <img id="infoPhoto" *ngIf="myTrip.imgLink != null" src="../../assets/images/{{myTrip.photoLinks[0]}}">
+            <button id="btnRight" class="btnSlider" (click)="changePhoto(1)"></button>
+        </div>
+        
+        <div class="date">
+            <p class="startDate"><b>Od:</b> {{myTrip.startDate}}</p>
+            <p class="endDate"><b>Do:</b> {{myTrip.endDate}}</p>
+        </div>
+        <p class="price">{{myTrip.price}} {{currency}}</p>
+
+        <p class="quantity" *ngIf="myTrip.remained > 0"><b>Ilość:</b> {{myTrip.remained}}</p>
+        <p class="quantity" *ngIf="myTrip.remained <= 0">BRAK MIEJSC</p>
+
+        <p class="description">{{myTrip.description}}</p>
+    </div>
+
+    <app-trip-rating [myId]="myTrip.id"></app-trip-rating>
+    
+</div>
+
+
+<form id="feedbackForm" (ngSubmit)="addFeedback()" [formGroup]="FeedbackFormGroup">
+    <h1>Podziel się swoją opinią!</h1>
+
+    <div class="formFeedEl">
+        <label class="labelNick" for="inputNick">Nick:</label>
+        <input id="inputNick" type="text" formControlName="nick" placeholder="~anonymus?">
+    </div>
+
+    <div class="formFeedEl">
+        <label class="labelTripName" for="inputTripName">Nazwa wycieczki:</label> 
+        <select id="inputTripName" formControlName="tripName">
+            <option *ngFor="let item of tripsList" [selected]="item.name === ngSelect">{{item.name}}</option>
+        </select>
+    </div>
+
+    <div class="formFeedEl">
+        <label class="labelDate" for="inputDate">Data zakupu:</label>
+        <input id="inputDate" type="date" formControlName="purchaseDate"> <br>
+    </div>
+
+    <div class="formFeedEl">
+        <label class="labelMessage" for="inputMessage">Twoje doznania:</label> <br>
+        <textarea id="inputMessage" formControlName="message" placeholder="(50-500) znaków"></textarea>
+    </div>
+    
+    <div class="formFeedSumbitPlace">
+        <input id="submitFeedback" type="submit" value="Wyślij opinię">
+    </div>
+    
+</form>
+
+<div id="feedbackEntriesPlace" *ngIf="feedbacksList.length > 0">
+    <h1>Opinie dodane przez użytkowników:</h1>
+    <div class="feedbacks" *ngFor="let feedback of feedbacksList">
+        <h2><b>{{feedback.nick}}</b> o wycieczce <i>"{{feedback.tripName}}"</i>:</h2>
+        <p>{{feedback.message}}</p>
+        <h6 *ngIf="feedback.purchaseDate != null">Wycieczka zakupiona dnia: {{feedback.purchaseDate}}</h6>
+    </div>
+</div>
+
+
+

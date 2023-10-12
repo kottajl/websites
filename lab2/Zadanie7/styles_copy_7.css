@@ -1,0 +1,86 @@
+body {
+    height: 100em;
+}
+main {
+    height: 45em;
+    width: 100%;
+    background-color: rgb(7, 70, 75);
+    padding: 0;
+    border-radius: 5px;
+    position: relative;
+}
+.call {
+    position: relative;
+}
+.call > picture > img {
+    height: 45em;
+    width: 35em; max-width: 98vw;
+    object-fit: cover;
+    object-position: 0 0%;
+    position: absolute;
+    top: 0.5em; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    margin-top: 0;
+    border-radius: 5px;
+    z-index: 4;
+}
+.buttons {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    justify-content: center;
+    z-index: 5;
+}
+.buttons > * {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.buttons > picture > img {
+    width: 4em;
+    border-radius: 50em;
+    box-shadow: 0 0 1px;
+}
+.volume > picture > img {
+    position: absolute;
+    top: 36em; left: 1em;
+    width: 3em;
+    z-index: 5;
+}
+
+.camera {
+    position: absolute;
+    left: 1.5em;
+    top: 1.5em;
+    z-index: 6;
+}
+.camera > picture > img {
+    width: 6em;
+    height: 8em;
+    object-fit: cover;
+    border-radius: 7px;
+    transition: width 0.5s;
+}
+article {
+    font-size: 1.5em;
+    margin: 2em 4em;
+    transition: margin 1s;
+}
+
+@media (max-width: 700px) {
+    article {
+        margin: 2em 2em;
+    }
+}
+
+@media (max-width: 600px) {
+    .camera > picture > img {
+        width: 7em;
+    }
+}

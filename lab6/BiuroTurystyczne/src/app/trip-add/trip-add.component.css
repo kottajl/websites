@@ -1,0 +1,137 @@
+@keyframes flashingShadow {
+    0% {
+        box-shadow: 0 0 2px grey;
+    }
+    40% {
+        box-shadow: 0 0 2px #505050;
+    }
+    50% {
+        box-shadow: 0 0 15px #505050;
+    }
+    60% {
+        box-shadow: 0 0 2px #505050;
+    }
+    70% {
+        box-shadow: 0 0 15px #505050;
+    }
+    80% {
+        box-shadow: 0 0 2px #505050;
+    }
+    90% {
+        box-shadow: 0 0 15px #505050;
+    }
+    100% {
+        box-shadow: 0 0 2px grey;
+    }
+}
+
+#adder, .flashyAdder {
+    user-select: none;
+    -webkit-user-select: none;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    width: 15em;
+    margin: 0.3em auto;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 0.1em; padding: 0.5em;
+    color: white;
+    background-color: green;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 100px;
+    box-shadow: 0 0 2px grey;
+    cursor: pointer;
+}
+.flashyAdder { animation: flashingShadow 1s linear; }
+
+#adder:hover { box-shadow: 0 0 10px grey; }
+main {
+    display: block;
+    position: relative;
+    padding: 1em 0;
+    background-color: #dbffe0;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 3px;
+    box-shadow: 0 0 3px grey;
+}
+#cancel {
+    padding: 0.1em 0.2em 0.1em 0.2em;
+    background-color: white;
+    font-size: 1.6em;
+    position: absolute;
+    right: 1em; top: 0.5em;
+    border-radius: 4px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 0 2px grey;
+    cursor: pointer;
+}
+#cancel:hover { box-shadow: 0 0 4px grey; }
+form {
+    margin-top: 3em;
+}
+.formElement {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+}
+.formElement:hover { background-color: #bcffc5; }
+
+.formElement > label {
+    font-size: 1.4em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.formElement > input {
+    width: 50%;
+    font-size: smaller;
+    margin-left: 1em;
+    padding: 0.5em;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    border-radius: 2px;
+}
+.formElement > input[type=date] {
+    width: 8em;
+}
+
+.formElement > input[type=file] {
+    border-style: none;
+}
+#submitPlace {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+form > #submitPlace > input[type=submit] {
+    margin: 1em; margin-bottom: 0;
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+input:focus::placeholder {
+    color: transparent;
+}
+
+
+.requiredError, .requiredErrorDate {
+    color: #c10101;
+    font-size: small;
+    font-weight: bold;
+    position: absolute;
+    top: 1.2em;
+}
+.requiredError { right: 2.5em; }
+.requiredErrorDate { right: 10em; }
+
+@media (max-width: 750px) {
+    input::placeholder {
+        color: transparent;
+    }
+}

@@ -1,0 +1,26 @@
+main {
+    display: flex;
+    flex-direction: row;
+    padding-right: 1.5em;
+    border-right: 2px solid black;
+}
+.star, .starBlack, .starGrey, .starRed, .starOrange, .starYellow, .starLightGreen, .starGreen {
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+.starBlack { filter: brightness(30%) grayscale(100%) }
+.starGrey { filter: grayscale(100%); }
+.starRed { filter: hue-rotate(-105deg) brightness(0.9); }
+.starOrange { filter: hue-rotate(-75deg) brightness(1); }
+.starYellow { filter: hue-rotate(-45deg) brightness(1.2) contrast(150%); }
+.starLightGreen { filter: hue-rotate(-25deg) brightness(1.1); }
+.starGreen { filter: hue-rotate(-0deg) brightness(0.9); }
+
+p {
+    font-family: monospace;
+    font-weight: bold;
+    margin: 0.2em; margin-left: 0.5em;
+    padding: 0em;
+    font-size: 1.8em;
+}

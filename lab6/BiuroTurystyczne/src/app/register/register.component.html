@@ -1,0 +1,14 @@
+<form id="registerForm" (ngSubmit)="addAccount()" [formGroup]="RegisterFormGroup">
+    <h1>Zarejestruj się!</h1>
+    <div class="formRegistEl">
+        <input id="inputRegEmail" type="email" formControlName="email">
+        <label class="labelReg" for="inputRegEmail">Adres email:</label>
+    </div>
+    <div class="formRegistEl">
+        <input id="inputRegPassword" type="password" formControlName="password">
+        <label class="labelReg" for="inputRegEmail">Hasło:</label>
+    </div>
+    <div class="formRegSumbitPlace">
+        <input id="submitReg" type="submit" value="Zarejestruj">
+    </div>
+</form>

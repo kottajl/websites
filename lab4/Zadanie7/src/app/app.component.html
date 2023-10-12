@@ -1,0 +1,6 @@
+<a id="linkToAdder" href="#b" (click)="animateAdder()">+</a>
+<app-basket (addTripEvent)="callAddTrip($event)" (removeTripEvent)="callRemoveTrip($event)"></app-basket>
+<app-trip-container (addNewTripEvent)="callAddNewTrip($event)" [addTripToBasket]="function1" [removeTripFromBasket]="function2"></app-trip-container>
+<app-trip-add [createTripInContainer]="function3"></app-trip-add>
+<div id="b"></div>
+<router-outlet></router-outlet>

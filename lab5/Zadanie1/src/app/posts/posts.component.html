@@ -1,0 +1,19 @@
+<form>
+    <h2>Dodaj swój post!</h2>
+    <label id="titleLabel">
+        Tytuł: <br>
+        <input id="newTitle" type="text">
+    </label>
+    <label id="contentLabel">
+        Treść: <br>
+        <input id="newContent" type="text">
+    </label>
+    <input value="Wyślij" id="newButton" type="button" (click)="makeNewPost()">
+</form>
+
+<main>
+    <div class="post" *ngFor="let item of postsArray">
+        <h3>{{item.title | uppercase}}</h3>
+        <p>{{item.body}}</p>
+    </div>
+</main>

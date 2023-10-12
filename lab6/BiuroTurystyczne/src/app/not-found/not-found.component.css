@@ -1,0 +1,13 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 8em;
+    opacity: 60%;
+    margin-bottom: 0;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2em;
+    opacity: 80%;    
+}

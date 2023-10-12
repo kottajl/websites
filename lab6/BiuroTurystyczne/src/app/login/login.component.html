@@ -1,0 +1,14 @@
+<form id="loginForm" (ngSubmit)="trySignIn()" [formGroup]="LogInFormGroup">
+    <h1>Zaloguj się!</h1>
+    <div class="formLogEl">
+        <input id="inputLogEmail" type="email" formControlName="email">
+        <label class="labelLog" for="inputRegEmail">Adres email:</label>
+    </div>
+    <div class="formLogEl">
+        <input id="inputLogPassword" type="password" formControlName="password">
+        <label class="labelLog" for="inputRegEmail">Hasło:</label>
+    </div>
+    <div class="formLogSumbitPlace">
+        <input id="submitLog" type="submit" value="Zaloguj">
+    </div>
+</form>

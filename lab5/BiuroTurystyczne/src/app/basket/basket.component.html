@@ -1,0 +1,25 @@
+<main>
+    <div class="currencyPlace">
+        <label>
+            Wybierz swoją walutę:
+            <select name="currencySelect" #chosenCurrency (change)="changeCurrency(chosenCurrency.value)"> 
+                <option *ngFor="let item of currencies" [selected]="item === currency">{{item}}</option>
+            </select>
+        </label>
+    </div>
+    
+    
+
+    <div id="infoContainer">
+        <h1>Zawartość koszyka:</h1>
+        <ul>
+            <li *ngFor="let element of tripBasket">
+                "<i>{{element.tripInfo.name}}</i>" - x<b>{{element.quantity}}</b> : {{element.cost}} {{currency}}
+            </li>
+        </ul>
+        <h3 class="lineAbove">Ilość wybranych wycieczek: <b>{{sumQuantity}}</b></h3>
+        <h3>Sumaryczny koszt: <b>{{sumCost}} {{currency}}</b></h3> <br>
+    </div>
+</main>
+
+

@@ -1,0 +1,22 @@
+[
+    {"brand": "Tesla", "model": "S", "color": ["black", "white", "red", "blue"]},
+    {"brand": "Tesla", "model": "3", "color": ["black", "white", "blue"]},
+    {"brand": "Tesla", "model": "X", "color": ["black", "orange"]},
+    {"brand": "Tesla", "model": "Y", "color": ["black", "white", "red"]},
+
+    {"brand": "Subaru", "model": "Impreza", "color": ["white", "blue"]},
+    {"brand": "Subaru", "model": "Outback", "color": ["black", "grey", "lightblue"]},
+    {"brand": "Subaru", "model": "Forester", "color": ["black"]},
+
+    {"brand": "Land Rover", "model": "Range Rover", "color": ["black", "red", "beige"]},
+    {"brand": "Land Rover", "model": "Discovery", "color": ["black", "white", "blue"]},
+    {"brand": "Land Rover", "model": "Defender", "color": ["red", "white"]},
+
+    {"brand": "Porsche", "model": "718", "color": ["black", "white", "blue", "red", "yellow"]},
+    {"brand": "Porsche", "model": "911", "color": ["black", "white", "blue", "red", "yellow"]},
+    {"brand": "Porsche", "model": "Taycan", "color": ["black", "white", "blue", "red"]},
+    {"brand": "Porsche", "model": "Macan", "color": ["black", "white", "lightblue"]},
+    {"brand": "Porsche", "model": "Panamera", "color": ["black", "white", "red"]},
+    {"brand": "Porsche", "model": "Cayenne", "color": ["black", "white", "beige"]}
+]
+  

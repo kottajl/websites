@@ -1,0 +1,152 @@
+nav {
+    width: fit-content;
+    position: sticky; top: 0.1em;
+    padding: 0 1em;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 2px;
+    margin: auto auto;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    z-index: 10;
+}
+.bigOrder { background-color: #005b00; }
+.smallOrder { background-color: #a20000; }
+
+nav > h1 {
+    margin: 0.2em;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 5;
+}
+.tripCard {
+    width: 20em;
+    margin: 1em;
+    padding: 1em; padding-top: 0.8em;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    border-radius: 14px;
+    box-shadow: 2px 2px 5px grey;
+}
+#dataSet {
+    display: flex;
+    flex-direction: column;
+}
+#dataSet > * {
+    margin: 0 auto;
+}
+#dataSet > img {
+    user-select: none;
+    -webkit-user-select: none;
+    width: 9em;
+    margin-bottom: 1em; margin-top: 1em;
+    border-radius: 50%;
+    box-shadow: 0 0 5px grey;
+    cursor: pointer;
+}
+#dataSet > img:hover { box-shadow: 0 0 10px grey; }
+#dataSet > h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dataSet > h5 {
+    font-weight: normal;
+}
+#dataSet > .date > .startDate { margin-bottom: 0; }
+#dataSet > .date > .endDate { margin-top: 0; }
+#dataSet > .price {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+#dataSet > .quantity {
+    font-size: 1.4em;
+    margin: 0.6em auto;
+}
+#dataSet > .description {
+    margin-top: 1em;
+    width: 90%;
+    height: 4em;
+    color: grey;
+    text-align: center;
+    overflow-y: auto;
+}
+.tripCard > .modify {
+    user-select: none;
+    -webkit-user-select: none;
+    display: flex;
+    position: absolute;
+    right: 1em;
+}
+.tripCard > .modify > button {
+    text-align: center;
+    font-size: 1.2em;
+    width: 2em; height: 2em;
+    margin-left: 0.2em;
+    border-radius: 50%;
+    border-style: solid;
+    cursor: pointer;
+}
+.tripCard > .modify > button:hover { box-shadow: 0 0 2px grey; }
+
+.actionControls {
+    user-select: none;
+    -webkit-user-select: none;
+    /* position: absolute; */
+    /* bottom: 1em; */
+    padding-top: 0.5em;
+    width: 100%;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-direction: row;
+    justify-content: space-between;
+}
+    .deleteTrip {
+        width: 3em; height: 3em;
+        margin-right: 0.5em; margin-bottom: 0.5em;
+        justify-self: end;
+        background-color: #c80000;
+        border-style: none;
+        border-radius: 0.7em;
+        cursor: pointer;
+    }
+    .deleteTrip > img { width: 1.5em; }
+    .deleteTrip:hover { box-shadow: 0 0 2px grey; }
+
+.top1Expensive {
+    border-color: green;
+}
+.cheapest {
+    border-color: red;
+}
+
+.lastSpots {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    margin-top: 0.6em;
+    left: 0.6em; top: 0em;
+    font-size: 1em;
+    font-weight: bold;
+    color: #b90000;
+}
+
+.rateCardInfo {
+    margin: 0; margin-top: 0.4em; margin-left: 1em;
+    padding: 0;
+    font-size: 1.2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,129 @@
+body {
+    background-color: bisque;
+}
+nav {
+    display: inline-block;
+    position: absolute;
+}
+article {
+    display: inline-block;
+    margin-left: 17em;
+    margin-right: 2em;
+    font-size: 1.2em;
+    transition: margin-left 1s;
+}
+.menu {
+    padding-right: 0.5em;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.4em;
+    height: 30em;
+    width: 17em;
+    border: 0;
+    border-right: 1px; border-bottom: 1px;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+    transition: width 1s;
+    box-shadow: 2px 2px 3px;
+}
+    .item {
+        padding-left: 0.8em;
+        padding-top: 0.5em; padding-bottom: 0.5em;
+        display: flex;
+        width: 16em;
+        height: 3em;
+        background-color: white;
+        border-right: 2px;
+        border-radius: 5px;
+        transition: width 1s;
+    }
+        img {
+            width: 3em;
+            margin-right: 1em;
+        }
+        .rightText, .rightText2 {
+            position: relative;
+            left: 0; bottom: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            white-space: nowrap;
+            /* border-style: solid; border-color: black; border-width: 1px; */
+            /* margin-left: 1em; */
+            transition: easy-out, width 1s, height 1s, font-size 1s;
+        }
+        .rightText {
+            margin-top: 1em;
+        }
+        .rightText2 {
+            margin-top: 0.5em;
+        }
+        .number {
+            position: absolute;
+            margin-left: 13em; margin-top: 0.3em;
+            height: min-content;
+            padding: 0.5em 0.7em;
+            border: 1px;
+            border-style: solid;
+            border-color: #38BCB3;
+            border-radius: 20px;
+            color: #38BCB3;
+            transition: margin-left 1s;
+        }
+    .item:hover {
+        background-color: #38BCB3;
+        cursor: pointer;
+    }
+
+    .item:hover > picture > .icon1 {
+        content: url("ikony/home2.png");
+    }
+    .item:hover > picture > .icon2 {
+        content: url("ikony/receptes2.png");
+    }
+    .item:hover > picture > .icon3 {
+        content: url("ikony/patients2.png");
+    }
+    .item:hover > picture > .icon4 {
+        content: url("ikony/invite2.png");
+    }
+    .item:hover > picture > .icon5 {
+        content: url("ikony/myprofile2.png");
+    }
+    .item:hover > picture > .icon6 {
+        content: url("ikony/settings2.png");
+    }
+
+    /* .item:hover > .rightText, .item:hover > .rightText2 {
+        height: 0;
+        width: 0;
+        font-size: 0;
+        margin-top: 8em;
+    } */
+    .item:hover > .number{
+        color: white;
+        border-color: white;
+    }
+
+article {
+    position: relative;
+}
+
+@media (max-width: 750px) {
+    article {
+        margin-left: 10em;
+    }
+    .menu {
+        width: 8em;
+    }
+        .item {
+            width: 7em;
+        }
+            .rightText, .rightText2 {
+                height: 0;
+                width: 0;
+                font-size: 0;
+            }
+            .number {
+                margin-left: 4em;
+            }
+}

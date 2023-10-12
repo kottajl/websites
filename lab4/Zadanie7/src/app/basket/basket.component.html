@@ -1,0 +1,17 @@
+<main>
+    <button id="basket" (click)="basketAction()"><img src="../../assets/icons/cart.png"></button>
+    <p id="help">Kliknij aby zobaczyć zawartość koszyka -></p>
+
+    <div id="infoContainer">
+        <h1>Zawartość koszyka:</h1>
+        <ul>
+            <li *ngFor="let element of tripBasket">
+                "<i>{{element.tripInfo.name}}</i>" - x<b>{{element.quantity}}</b> : {{element.cost}} PLN
+            </li>
+        </ul>
+        <h3 class="lineAbove">Ilość wybranych wycieczek: <b>{{sumQuantity}}</b></h3>
+        <h3>Sumaryczny koszt: <b>{{sumCost}} PLN</b></h3> <br>
+    </div>
+</main>
+
+

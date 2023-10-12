@@ -1,0 +1,91 @@
+@keyframes shadowEffectIn {
+    from {
+        box-shadow: 0 0 2px grey;
+    }
+    to {
+        box-shadow: 0 0 10px grey;
+    }
+}
+@keyframes shadowEffectOut {
+    from {
+        box-shadow: 0 0 10px grey;
+    }
+    to {
+        box-shadow: 0 0 2px grey;
+    }
+}
+
+
+main {
+    position: relative;
+    height: fit-content;
+    min-height: 5em;
+    padding-bottom: 1em;
+}
+#basket {
+    width: fit-content;
+    padding: 0.5em 0.7em 0.2em 0.5em;
+    border-style: solid;
+    border-color: black;
+    border-radius: 0.5em;
+    position: absolute; right: 1em; top: 1em;
+    animation: 0.2s shadowEffectOut linear;
+    box-shadow: 0 0 2px grey;
+    cursor: pointer;
+}
+#basket:hover {
+    animation: 0.5s shadowEffectIn;
+    box-shadow: 0 0 10px grey;
+}
+#basket > img {
+    width: 3em;
+}
+
+#help {
+    position: absolute;
+    right: 6em;
+}
+#infoContainer {
+    display: none;
+    background-color: white;
+    height: fit-content;
+    min-height: 5em;
+    padding-top: 1px;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px grey;
+}
+#info {
+    height: fit-content;
+    min-height: 4em;
+}
+#info > p {
+    font-size: 2em;
+}
+
+ul {
+    line-height: 180%;
+    margin: 0;
+}
+ul > li {
+    font-size: 1.2em;
+    margin-left: 1em;
+}
+
+h1 {
+    margin-left: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h3 {
+    margin: 0 2em;
+    padding-right: 1em;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+}
+.lineAbove {
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width: 2px;
+}

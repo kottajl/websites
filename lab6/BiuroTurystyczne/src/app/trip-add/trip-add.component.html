@@ -1,0 +1,70 @@
+<div id="adder" (click)="changeVisibility()">DODAJ WYCIECZKĘ</div>
+<main id="main">
+    <div id="cancel" (click)="changeVisibility()">❌</div>
+
+    <form id="newTripForm" (ngSubmit)="addTrip()" [formGroup]="TheFormGroup">
+        <div class="formElement">
+            <label for="name">Nazwa wycieczki: </label>
+            <input id="name" formControlName="name" type="text" placeholder="Wprowadź nazwę wycieczki"/>
+            <div class="requiredError" *ngIf="TheFormGroup.get('name')?.hasError('required') && TheFormGroup.get('name')?.touched">
+                Pole jest wymagane!
+            </div>
+        </div>
+    
+        <div class="formElement">
+            <label for="country">Nazwa kraju: </label>
+            <input id="country" formControlName="country" type="text" placeholder="Wprowadź nazwę kraju"/>
+            <div class="requiredError" *ngIf="TheFormGroup.get('country')?.hasError('required') && TheFormGroup.get('country')?.touched">
+                Pole jest wymagane!
+            </div>
+        </div>
+    
+        <div class="formElement">
+            <label for="startDate">Data rozpoczęcia: </label>
+            <input id="startDate" formControlName="startDate" type="date" placeholder="Wprowadź datę rozpoczęcia"/>
+            <div class="requiredErrorDate" *ngIf="TheFormGroup.get('startDate')?.hasError('required') && TheFormGroup.get('startDate')?.touched">
+                Pole jest wymagane!
+            </div>
+        </div>
+    
+        <div class="formElement">
+            <label for="endDate">Data zakończenia: </label>
+            <input id="endDate" formControlName="endDate" type="date" placeholder="Wprowadź datę zakończenia"/>
+            <div class="requiredErrorDate" *ngIf="TheFormGroup.get('endDate')?.hasError('required') && TheFormGroup.get('endDate')?.touched">
+                Pole jest wymagane!
+            </div>
+        </div>
+    
+        <div class="formElement">
+            <label for="price">Cena w PLN: </label>
+            <input id="price" formControlName="price" type="number" placeholder="Wprowadź wartość ceny wycieczki"/>
+            <div class="requiredError" *ngIf="TheFormGroup.get('price')?.hasError('required') && TheFormGroup.get('price')?.touched">
+                Pole jest wymagane!
+            </div>
+        </div>
+        
+        <div class="formElement">
+            <label for="quantity">Ilość dostępnych miejsc: </label>
+            <input id="quantity" formControlName="quantity" type="number" placeholder="Wprowadź ilość miejsc"/>
+            <div class="requiredError" *ngIf="TheFormGroup.get('quantity')?.hasError('required') && TheFormGroup.get('quantity')?.touched">
+                Pole jest wymagane!
+            </div>
+        </div>
+    
+        <div class="formElement">
+            <label for="description">Opis wycieczki <i>(opcjonalne)</i>: </label>
+            <input id="description" formControlName="description" type="text" placeholder="Wprowadź krótki opis wycieczki"/>
+        </div>
+    
+        <div class="formElement">
+            <label for="imgLink">Zdjęcie poglądowe <i>(opcjonalne)</i>: </label>
+            <input id="imgLink" formControlName="imgLink" type="file"/>
+        </div>
+    
+        <div id="submitPlace"><input type="submit" value="Dodaj wycieczkę"></div>
+    
+    </form>
+</main>
+
+
+

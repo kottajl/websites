@@ -1,0 +1,27 @@
+<div id="box">
+    <br>
+    <app-result [name]="name" [descript]="descript"></app-result>
+    <br>
+    <main>
+        <h2>Wybierz temat</h2>
+        <div id="container">
+            <div class="topic">
+                <h3>The Basics</h3>
+                <p>Core Angular basics you have to know</p>
+                <button (click)="setTopic('The Basics', 'Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your applications.')">Learn more</button>
+            </div>
+            <div class="topic">
+                <h3>Components</h3>
+                <p>Components are a core concept for building Angular UIs and apps</p>
+                <button (click)="setTopic('Components', 'With components, you can split logic (and markup) into separate building blocks and then combine those building blocks (and re-use them) to build powerful user interfaces.')">Learn more</button>
+            </div>
+            <div class="topic">
+                <h3>Events</h3>
+                <p>Events are important in Angular</p>
+                <button (click)="setTopic('Events', 'Events allow you to trigger code on demand!')">Learn more</button>
+            </div>
+        </div>
+    </main>
+    
+
+</div>

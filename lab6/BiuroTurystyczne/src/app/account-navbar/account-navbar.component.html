@@ -1,0 +1,18 @@
+<nav>
+
+    <div class="accLinks">
+        <div class="accLink" id="registerLink" *ngIf="this.user == null" routerLink="/register">Rejestracja</div>
+        <div class="accLink" id="loginLink" *ngIf="this.user == null" routerLink="/login">Logowanie</div>
+
+        <div id="persistanceChanger">
+            <select id="persistanceSelect" name="persistanceSelect" #chosenPersistance *ngIf="this.user != null" (change)="changePersistance(chosenPersistance.value)"> 
+                <option disabled>persystencja</option>
+                <option *ngFor="let item of persistanceOptions" [selected]="item === this.accService.persistenceValue">{{item}}</option>
+            </select>
+        </div>
+        <div class="accLink" *ngIf="this.user != null" (click)="signOut()">Wyloguj</div>
+    </div>
+
+    <div class="accName" *ngIf="this.user != null">{{this.user.email}}</div>
+    
+</nav>

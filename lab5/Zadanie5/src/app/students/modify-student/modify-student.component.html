@@ -1,0 +1,21 @@
+<h3>Modyfikowanie danych studenta nr {{student.key}}</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Imię</label>
+      <input type="text" class="form-control" id="name" value="{{student.name}}" required [(ngModel)]="student.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Wiek w latach</label>
+      <input type="number" class="form-control" id="age" value="{{student.age}}" required [(ngModel)]="student.age" name="age">
+    </div>
+
+    <button type="submit" class="btn btn-success">Zmień</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Dane studenta zostały prawidłowo zmodyfikowane</h4>
+  <button class="btn btn-success" routerLink="/students">Powrót do listy studentów</button>
+</div>

@@ -1,0 +1,19 @@
+main {
+    width: 90vw;
+    height: fit-content;
+    margin: 0 2vw;
+    padding: 1em 0.5vw;
+    min-height: 4em;
+    box-shadow: 0 0 10px grey;
+    border-radius: 5px;
+}
+main > * {
+    margin: 0 2vw;
+}
+h2 {
+    text-align: center;
+}
+main > p {
+    margin-top: 1.5em;
+    text-align: center;
+}

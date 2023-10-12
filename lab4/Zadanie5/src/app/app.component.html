@@ -1,0 +1,24 @@
+<br><br>
+<label>Select the brand: 
+  <select name="brand" #chosenBrand (change)="changeBrand(chosenBrand.value)">
+    <option value="" disabled selected>Select the brand</option>
+    <option *ngFor="let item of brands">{{item}}</option>
+  </select>
+</label> <br>
+
+
+<label>Select the model: 
+  <select name="model" #chosenModel (change)="changeModel(chosenModel.value)">
+    <option *ngFor="let item of models">{{item}}</option>
+  </select>
+</label> <br>
+
+<label>Select the color: 
+  <select name="colour" #chosenColour (change)="changeColour(chosenColour.value)">
+    <option *ngFor="let item of colours">{{item}}</option>
+  </select>
+</label> <br>
+
+<p>Your choice is <b>{{myBrand}}</b> {{myModel}} in {{myColour}}.</p>
+
+<router-outlet></router-outlet>

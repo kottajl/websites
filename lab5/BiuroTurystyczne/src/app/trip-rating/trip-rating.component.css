@@ -1,0 +1,35 @@
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.star, .starBlack, .starGrey, .starRed, .starOrange, .starYellow, .starLightGreen, .starGreen {
+    width: 7%;
+    height: 7%;
+    /* max-width: 50px; max-height: 50px; */
+    cursor: pointer;
+}
+.starBlack { filter: brightness(30%) grayscale(100%) }
+.starGrey { filter: grayscale(100%); }
+.starRed { filter: hue-rotate(-105deg) brightness(0.9); }
+.starOrange { filter: hue-rotate(-75deg) brightness(1); }
+.starYellow { filter: hue-rotate(-45deg) brightness(1.2) contrast(150%); }
+.starLightGreen { filter: hue-rotate(-25deg) brightness(1.1); }
+.starGreen { filter: hue-rotate(-0deg) brightness(0.9); }
+
+p {
+    font-family: monospace;
+    font-weight: bold;
+    margin: 0.3em; margin-left: 0.5em;
+    padding: 0;
+    font-size: 3vw;
+}
+
+@media (min-width: 950px) {
+    .star, .starBlack, .starGrey, .starRed, .starOrange, .starYellow, .starLightGreen, .starGreen {
+        width: 50px; height: 50px;
+    }
+    p {
+        font-size: 2.4em;
+    }
+}

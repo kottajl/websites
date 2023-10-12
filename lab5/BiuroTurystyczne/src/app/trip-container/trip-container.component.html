@@ -1,0 +1,43 @@
+<!-- <nav [ngClass]="{
+    'bigOrder': tripsInBasket >= 10,
+    'smallOrder': tripsInBasket < 10
+}">
+    <h1>Aktualna ilość wybranych rezerwacji: {{tripsInBasket}}</h1>
+</nav> -->
+
+<main class="cardsContainer">
+    <div id="card{{trip.id}}" class="tripCard" *ngFor="let trip of trips" [ngClass]="{
+        'top1Expensive': trip.price == maxPrice(),
+        'cheapest': trip.price == minPrice()
+    }">
+        <p *ngIf="trip.remained > 0 && trip.remained <= 3" class="lastSpots">! Ostatnie miejsca !</p>
+        <div class="modify">
+            <button *ngIf="trip.remained > 0" (click)="addTrip(trip)">+</button>
+            <button [disabled]="trip.remained === trip.maxQuantity" (click)="removeTrip(trip)">-</button>
+        </div>
+        
+        <div id="dataSet">
+            <img src="../../assets/images/{{trip.imgLink}}" routerLink="/trip-info/{{trip.id}}">
+            <h2>{{trip.name | uppercase}}</h2>
+            <h5>{{trip.country | uppercase}}</h5>
+            <div class="date">
+                <p class="startDate"><b>Od:</b> {{trip.startDate}}</p>
+                <p class="endDate"><b>Do:</b> {{trip.endDate}}</p>
+            </div>
+            <p class="price">{{trip.price}} {{currency}}</p>
+
+            <p class="quantity" *ngIf="trip.remained > 0"><b>Ilość:</b> {{trip.remained}}</p>
+            <p class="quantity" *ngIf="trip.remained <= 0">BRAK MIEJSC</p>
+
+            <p class="description">{{trip.description}}</p>
+        </div>
+
+        <div class="actionControls">
+            <button class="deleteTrip" (click)="deleteTrip(trip)">
+                <img src="../../assets/icons/trashbin.png">
+            </button>
+            <p class="rateCardInfo"><b>Ocena:</b> {{getRate(trip)}}</p>
+        </div>
+        
+    </div>
+</main>

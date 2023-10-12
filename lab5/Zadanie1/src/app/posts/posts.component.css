@@ -1,0 +1,59 @@
+form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20em;
+    padding: 1em;
+    box-shadow: 0 0 2px grey;
+    border-radius: 5px;
+}
+form > h2 {
+    margin-top: 0.2em;
+}
+form > label {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+    #newTitle, #newContent {
+        margin-top: 0.4em; margin-left: 0.2em;
+        width: 95%;
+        height: 2em;
+        padding: 0.2em;
+        font-size: 0.8em;
+    }
+    #newContent {
+        height: 3em;
+
+    }
+    #newButton {
+        width: 8em;
+        margin-left: 16em; 
+        text-align: center;
+        cursor: pointer;
+    }
+
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    justify-content: first baseline;
+    width: 200px;
+    height: auto;
+    margin: 1em;
+    padding: 1em;
+    box-shadow: 2px 2px 3px grey;
+    border-radius: 3px;
+}
+
+.post > * {
+    text-align: center;
+}

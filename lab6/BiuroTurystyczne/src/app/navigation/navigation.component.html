@@ -1,0 +1,27 @@
+<nav>
+    <button id="homeButton" routerLink="/home"><img src="../../assets/icons/home.png"></button>
+
+    <div class="tripsNavButtons">
+        <button id="offerButton" routerLink="/offer"><img src="../../assets/icons/backpack.png"></button>
+        <button id="linkToAdder" *ngIf="this.getAccService().isLoggedIn()" routerLink="/add-trip">+</button>
+    </div>
+    
+    <h1 class="logo">BOOK & TRAVEL</h1>
+
+    <div *ngIf="this.getAccService().isLoggedIn()">
+
+        <img id="warngingNav" src="../../assets/icons/warning.png">
+
+        <p class="miniCost" *ngIf="costOfBasket > 0">{{costOfBasket}} {{currency}}</p>
+    
+        <div routerLink="/basket" *ngIf="tripsInBasket > 0" [ngClass]="{
+            'miniQuantBigOrder': tripsInBasket >= 10,
+            'miniQuantSmallOrder': tripsInBasket < 10
+        }"> {{tripsInBasket}} </div>
+
+    </div>
+    
+
+
+    <button id="basket" routerLink="/basket"><img src="../../assets/icons/cart.png"></button>
+</nav>

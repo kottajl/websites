@@ -1,0 +1,140 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 5em;
+}
+
+    .item {
+        margin: 2em;
+        position: relative;
+        width: 20em;
+        height: 30em;
+        z-index: 3;
+        perspective: 1000px;
+    }
+        .card {
+            position: relative;
+            width: 20em;
+            height: 30em;
+            box-shadow: 0 1px 10px grey;
+            overflow: hidden;
+            transition: transform 0.5s linear 0.5s;
+            z-index: 3;
+        }
+        .card > picture {
+            position: relative;
+            width: 20em;
+            height: 13em;
+        }
+            .card > picture > img {
+                position: relative;
+                width: 20em;
+                overflow: hidden;
+                z-index: -2;
+            }
+        
+
+        .card > .colorbox {
+            position: absolute;
+            top: 0;
+            height: 12em;
+            width: 20em;
+            opacity: 50%;
+            z-index: -1;
+        }
+        .card > .nazwa1, .card > .nazwa2 {
+            position: absolute;
+            right: 0;
+            font-size: 2.2em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            z-index: 3;
+            background-color: rgba(128, 128, 128, 0.314);
+            color: white;
+            padding: 0.2em;
+            z-index: 2;
+        }
+        .card > .nazwa1 {
+            top: 2em;
+        }
+        .card > .nazwa2 {
+            top: 3.4em;
+        }
+
+        .whiteTriangle {
+            position: absolute; top: 10.5em;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 0 0 1.5em 20em;
+            border-color: transparent transparent white transparent;
+            z-index: 1;
+        }
+
+        .card > .opis {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            .opis > p {
+                width: 14em;
+                margin-top: 0;
+                padding-bottom: 10px;
+                text-align: center;
+                margin-bottom: 1em;
+                border-style: solid;
+                border-width: 0; border-bottom-width: 1px;
+                border-color: rgba(128, 128, 128, 0.314);
+                color: grey
+            }
+            .opis > p:last-of-type {
+                border-width: 0;
+            }
+        
+            .backCard {
+                position: absolute;
+                top: 0;
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 20em;
+                height: 30em;
+                transform: rotateY(90deg);
+                transition: transform 0.5s linear;
+            }
+            .backCard > p {
+                font-size: 1.2em;
+                margin-top: 6em;
+                margin-bottom: 0.5em;
+                transform: rotateY(180deg);
+            }
+            .backCard > h2 {
+                font-size: 4em;
+                font-weight: normal;
+                margin-top: 0em;
+                transform: rotateY(180deg);
+            }
+            .button {
+                margin-top: 3em;
+                padding: 1em 1.5em;
+                font-size: 1.2em;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: white;
+                background-color: blue;
+                text-align: center;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+            .button > img {
+                width: 7em;
+            }
+
+    .item:hover > .card {
+        transform: rotateY(90deg);
+        transition: transform 0.5s linear;
+    }
+    .item:hover > .backCard {
+        transform: rotateY(180deg);
+        transition: transform 0.5s linear 0.5s;
+    }

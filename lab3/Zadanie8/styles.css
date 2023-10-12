@@ -1,0 +1,46 @@
+body {
+    font-size: 1.1em;
+    padding: 1em;
+}
+
+#passForm {
+    position: relative;
+}
+
+#input1, #input2 {
+    width: 20em;
+    height: 2.4em;
+    margin-top: 1em;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+form > label {
+    position: relative;
+}
+
+.visIcon {
+    position: absolute;
+    top: 2.2em; right: 0.4em;
+    padding: 0 0.4em;
+    width: 1.4em;
+    z-index: 2;
+}
+
+#req > * {
+    display: inline;
+}
+#req > p {
+    font-size: smaller;
+}
+
+#check1, #check2, #check3, #check4 {
+    margin: 0.3em 0;
+}
+
+#check1 > img, #check2 > img, #check3 > img, #check4 > img {
+    width: 1em;
+    transform: translateY(0.25em);
+}

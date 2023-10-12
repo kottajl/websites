@@ -1,0 +1,6 @@
+<main>
+    <div class="photo" *ngFor="let item of photosArray" routerLink="/photo/{{item.id}}">
+        <img [src]="item.thumbnailUrl">
+        <h3>{{item.title}}</h3>
+    </div>
+</main>

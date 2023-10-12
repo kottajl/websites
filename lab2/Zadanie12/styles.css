@@ -1,0 +1,305 @@
+body {
+    background-color: rgb(180, 180, 180);
+    padding-left: 2em;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    --colour: rgb(20, 111, 230);
+}
+.card {
+    position: relative;
+}
+    .nikeLogo, .shareIcon {
+        position: absolute;
+        z-index: 7;
+        top: 3.4em;
+    }
+    .nikeLogo { left: 4em; }
+        .nikeLogo > img { width: 4em; }
+
+    .shareIcon {
+        left: 19.5em;
+        border-radius: 50px;
+        background-color: var(--colour);
+    }
+        .shareIcon > img { width: 3em; }
+
+    .rect {
+        position: relative;
+        background-color: var(--colour);
+        width: 20em;
+        height: 22em;
+        margin: 0; margin-top: 3em; margin-left: 3em;
+        z-index: 5;
+    }
+        .rect > p {
+            margin: 0;
+            padding: 0; padding-top: 0.5em; padding-left: 0.1em;
+            font-size: 8em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            opacity: 0.1;
+        }
+        .rect > picture > img {
+            position: absolute;
+            right: 0.5em; top: 4em;
+            width: 28em;
+            transform: rotateZ(-20deg);
+        }
+
+
+    .info {
+        position: relative;
+        background-color: white;
+        width: 18em; height: 23em;
+        margin: 0; margin-top: 2em;
+        padding: 2em; padding-top: 0;
+        box-shadow: 5px 1px 20px grey;
+    }
+        .new {
+            position: absolute;
+            right: 2em; top: 2em;
+            width: 3.6em; height: 1.8em;
+            font-size: 0.8em;
+            color: white;
+            text-align: center;
+            background-color: var(--colour);
+            border-radius: 5px;
+        }
+            .new > p {
+                padding: 0; margin: 0;
+                padding-top: 0.3em;
+            }
+        .info > * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0; padding: 0;
+        }
+        .info > h1 {
+            font-size: 1.8em;
+            margin-top: 0.8em;
+        }
+        .info > h3 {
+            font-size: 1em;
+            border-style: solid;
+            border-color: grey;
+            border-width: 0; border-top-width: 1px;
+            margin-top: 0.5em; padding-top: 0.7em;
+        }
+        .info > p { color: grey; }
+
+        .whatColor { margin-left: 1em; }
+        .whatColor > input[type=radio] {
+            appearance: none;
+            margin: 0; margin-top: 1em; margin-right: 1em;
+            font: inherit;
+            width: 1.15em;
+            height: 1.15em;
+            border-radius: 50%;
+        }
+        .whatColor > input[type=radio]:hover {
+            box-shadow: 0 0 5px grey;
+        }
+        .whatColor > input[type=radio]:checked {
+            border-style: solid;
+            border-color: white;
+            border-width: 4px;
+            box-shadow: 0 0 5px grey;
+        }
+
+        .whatColor > input[type=radio].blue {
+            background-color: rgb(20, 111, 230);
+        }
+        .whatColor > input[type=radio].red {
+            background-color: rgb(250, 60, 60);
+        }
+        .whatColor > input[type=radio].green {
+            background-color: green;
+        }
+        .whatColor > input[type=radio].orange {
+            background-color: rgb(255, 106, 0);
+        }
+        .whatColor > input[type=radio].black {
+            background-color: rgb(43, 43, 43);
+        }
+        
+        
+
+        main:has(> .info > .whatColor > input[type=radio].blue:checked) {
+            --colour: rgb(20, 111, 230);
+        }
+        main:has(> .info > .whatColor > input[type=radio].blue:checked) > .card > .rect > picture > img {
+            filter: hue-rotate(0deg);
+        }
+
+        main:has(> .info > .whatColor > input[type=radio].red:checked) {
+            --colour: rgb(250, 60, 60);
+        }
+        main:has(> .info > .whatColor > input[type=radio].red:checked) > .card > .rect > picture > img {
+            filter: hue-rotate(-240deg);
+        }
+
+        main:has(> .info > .whatColor > input[type=radio].green:checked) {
+            --colour: green;
+        }
+        main:has(> .info > .whatColor > input[type=radio].green:checked) > .card > .rect > picture > img {
+            filter: hue-rotate(-120deg);
+        }
+
+        main:has(> .info > .whatColor > input[type=radio].orange:checked) {
+            --colour: rgb(255, 106, 0);
+        }
+        main:has(> .info > .whatColor > input[type=radio].orange:checked) > .card > .rect > picture > img {
+            filter: hue-rotate(-210deg);
+        }
+
+        main:has(> .info > .whatColor > input[type=radio].black:checked) {
+            --colour: rgb(43, 43, 43);
+        }
+        main:has(> .info > .whatColor > input[type=radio].black:checked) > .card > .rect > picture > img {
+            filter:grayscale(100%);
+        }
+
+
+
+        main:has(> .info > .whatColor > input[type=radio].blue:hover) {
+            --colour: rgb(20, 111, 230);
+        }
+        main:has(> .info > .whatColor > input[type=radio].blue:hover) > .card > .rect > picture > img {
+            filter: hue-rotate(0deg);
+        }
+
+        main:has(> .info > .whatColor > input[type=radio].red:hover) {
+            --colour: rgb(250, 60, 60);
+        }
+        main:has(> .info > .whatColor > input[type=radio].red:hover) > .card > .rect > picture > img {
+            filter: hue-rotate(-240deg);
+        }
+
+        main:has(> .info > .whatColor > input[type=radio].green:hover) {
+            --colour: green;
+        }
+        main:has(> .info > .whatColor > input[type=radio].green:hover) > .card > .rect > picture > img {
+            filter: hue-rotate(-120deg);
+        }
+
+        main:has(> .info > .whatColor > input[type=radio].orange:hover) {
+            --colour: rgb(255, 106, 0);
+        }
+        main:has(> .info > .whatColor > input[type=radio].orange:hover) > .card > .rect > picture > img {
+            filter: hue-rotate(-210deg);
+        }
+
+        main:has(> .info > .whatColor > input[type=radio].black:hover) {
+            --colour: rgb(43, 43, 43);
+        }
+        main:has(> .info > .whatColor > input[type=radio].black:hover) > .card > .rect > picture > img {
+            filter: grayscale(100%);
+        }
+
+    
+    .whatSize {
+        padding-left: 1em; padding-bottom: 1em;
+        border-style: solid;
+        border-color: grey;
+        border-width: 0; border-bottom-width: 1px;
+    }
+    .whatSize > input[type=radio].seven::before {
+        content: "7";
+        font-size: 0.8em;
+        margin: 7px;
+    }
+    .whatSize > input[type=radio].eight::before {
+        content: "8";
+        font-size: 0.8em;
+        margin: 7px;
+    }
+    .whatSize > input[type=radio].nine::before {
+        content: "9";
+        font-size: 0.8em;
+        margin: 7px;
+    }
+    .whatSize > input[type=radio].ten::before {
+        content: "10";
+        font-size: 0.8em;
+        margin: 3px;
+    }
+    .whatSize > input[type=radio].eleven::before {
+        content: "11";
+        font-size: 0.8em;
+        margin: 4px;
+    }
+
+    .whatSize > input[type=radio] {
+        appearance: none;
+        background-color: rgb(178, 178, 178);
+        margin: 0; margin-top: 1em; margin-right: 1em;
+        font: inherit;
+        width: 1.3em;
+        height: 1.3em;
+        border-radius: 20%;
+    }
+    .whatSize > input[type=radio]:checked {
+        box-shadow: 0 0 5px grey;
+        color: white;
+        background-color: var(--colour);
+    }
+    .whatSize > input[type=radio]:hover {
+        box-shadow: 0 0 5px grey;
+    }
+
+    .button {
+        margin-top: 0.8em;
+        color: white;
+        background-color: var(--colour);
+        width: 8.4em;
+        padding: 0.4em 0.6em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+        .button > img { width: 1em; }
+    .price {
+        position: absolute;
+        right: 1em; bottom: 0.8em;
+        font-size: 1.8em;
+    }
+
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    body {
+        padding-left: 0em;
+    }
+        .card {
+            margin-bottom: 0;
+        }
+            .nikeLogo { left: 1em; }
+            .shareIcon {
+                top: 3.6em;
+                left: 19em;
+            }
+            .shareIcon > img { width: 2em; }
+
+            .rect {
+                width: 22em;
+                height: 14em;
+                margin: 0; margin-top: 3em; margin-left: 0em;
+            }
+                .rect > p {
+                    padding-top: 0.25em; padding-left: 0.2em;
+                    font-size: 8em;
+                }
+                .rect > picture > img {
+                    right: 0.5em; top: 0.5em;
+                    width: 24em;
+                    transform: rotateZ(0deg);
+                }
+        .info {
+            margin-top: 0;
+        }
+
+}
